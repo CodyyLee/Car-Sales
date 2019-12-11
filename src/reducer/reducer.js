@@ -38,15 +38,14 @@ export const initialState = {
                 ]
             }
 
-            case "REMOVE_FEATURE":
-                console.log('accessed');
+            case REMOVE_FEATURE:
                 const remove = state.car.features.filter((item) => {
                     return item.id !== action.feature.id
                 })
 
                 return {
                     ...state,
-                    additionalPrice: state.additionalPrice - action.target.price,
+                    additionalPrice: state.additionalPrice - action.feature.price,
                     car: {
                         ...state.car,
                         features: [

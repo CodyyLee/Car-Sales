@@ -6,10 +6,6 @@ import { connect } from "react-redux";
 
 const AdditionalFeature = props => {
 
-  const log = () => {
-    console.log(props.feature.price);
-  }
-
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
